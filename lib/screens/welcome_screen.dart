@@ -1,6 +1,8 @@
+import 'package:chat_free/constants.dart';
 import 'package:chat_free/screens/login_screen.dart';
 import 'package:chat_free/screens/registration_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:animated_text_kit/animated_text_kit.dart';
 
 class WelcomeScreen extends StatefulWidget {
   static const String id = 'welcome_screen'; // ID of this particular screen
@@ -61,10 +63,13 @@ class _WelcomeScreenState extends State<WelcomeScreen> with SingleTickerProvider
                   ),
                 ),
                 Text(
-                  'ChatFree',
-                  style: TextStyle(
-                    fontSize: 45.0,
-                    fontWeight: FontWeight.w900,
+                  'Chat',
+                  style: kTitleTextStyle,
+                ),
+                RotateAnimatedTextKit(
+                  text: ['Free', 'Easy', 'Whenever', 'Always'],
+                  textStyle: kTitleTextStyle.copyWith(
+                    color: Colors.black,
                   ),
                 ),
               ],
