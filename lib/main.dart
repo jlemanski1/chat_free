@@ -1,6 +1,9 @@
+import 'package:flutter/material.dart';
+
+// Screens
+import 'package:chat_free/screens/chat_screen.dart';
 import 'package:chat_free/screens/login_screen.dart';
 import 'package:chat_free/screens/registration_screen.dart';
-import 'package:flutter/material.dart';
 import 'package:chat_free/screens/welcome_screen.dart';
 
 void main() => runApp(ChatFree());
@@ -19,6 +22,7 @@ class ChatFree extends StatelessWidget {
         WelcomeScreen.id: (context) => WelcomeScreen(),
         LoginScreen.id: (context) => LoginScreen(),
         RegistrationScreen.id: (context) => RegistrationScreen(),
+        ChatScreen.id: (context) => ChatScreen(),
       },
     );
   }
