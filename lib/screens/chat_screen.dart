@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:chat_free/constants.dart';
 
 class ChatScreen extends StatefulWidget {
-  static String id = 'chat_screen'; // ID of this particular screen
+  static const String id = 'chat_screen'; // ID of this particular screen
 
   @override
   _ChatScreenState createState() => _ChatScreenState();
