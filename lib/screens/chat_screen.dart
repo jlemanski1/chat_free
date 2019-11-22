@@ -1,3 +1,4 @@
+import 'package:chat_free/components/message_bubble.dart';
 import 'package:flutter/material.dart';
 import 'package:chat_free/constants.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -70,20 +71,25 @@ class _ChatScreenState extends State<ChatScreen> {
                     ),
                   );
                 }
-
-                // StreamBuilder has data from Cloud FireStore
+                // snapshot contains data from Cloud FireStore
                 final msgs = snapshot.data.documents;
 
-                List<Text> msgWidgets = [];
+                List<MessageBubble> msgBubbles = [];
                 for (var msg in msgs) {
                   final msgText = msg.data['text'];
                   final msgSender = msg.data['sender'];
 
-                  final msgWidget = Text('$msgText from $msgSender');
-                  msgWidgets.add(msgWidget);
+                  final msgBubble = MessageBubble(
+                    sender: msgSender,
+                    text: msgText,
+                  );
+                  msgBubbles.add(msgBubble);
                 }
-                return Column(
-                  children: msgWidgets,
+                return Expanded(
+                  child: ListView(
+                    padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 20.0),
+                    children: msgBubbles,
+                  ),
                 );
               },
             ),
