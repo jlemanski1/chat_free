@@ -38,16 +38,6 @@ class _ChatScreenState extends State<ChatScreen> {
   }
 
 
-  // Listen to cloud FireStore messages collection & retrieve on change
-  void messageStream() async {
-    await for(var snapshot in _fireStore.collection('messages').snapshots()) {
-      for (var msg in snapshot.documents) {
-        print(msg.data);
-      }
-    }
-  }
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
