@@ -70,7 +70,6 @@ git clone https://github.com/jlemanski1/chat_free.git
 ```
 2. Run flutter doctor to ensure everything is setup correctly
 ```sh
-cd bmi_calculator
 flutter doctor
 ```
 3. Build APK
