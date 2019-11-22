@@ -1,4 +1,5 @@
 import 'package:chat_free/components/rounded_button.dart';
+import 'package:chat_free/constants.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -33,21 +34,9 @@ class _LoginScreenState extends State<LoginScreen> {
               onChanged: (value) {
                 // TODO: do something with user input
               },
-              decoration: InputDecoration(
+              decoration: kTextFieldDecoration.copyWith(
                 hintText: 'Enter your email',
-                contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(32.0)),
-                ),
-                enabledBorder: OutlineInputBorder(
-                  borderSide: BorderSide(color: Colors.lightBlueAccent, width: 1.0),
-                  borderRadius: BorderRadius.all(Radius.circular(32.0)),
-                ),
-                focusedBorder: OutlineInputBorder(
-                  borderSide: BorderSide(color: Colors.lightBlueAccent, width: 2.0),
-                  borderRadius: BorderRadius.all(Radius.circular(32.0)),
-                ),
-              ),
+              )
             ),
             SizedBox(
               height: 24.0,
