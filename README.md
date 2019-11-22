@@ -9,7 +9,7 @@
   <h3 align="center">ChatFree</h3>
 
   <p align="center">
-    A sleek, yet free crossplatform chat app
+    A sleek crossplatform chat app
     <br />
     <a href="https://github.com/jlemanski1/chat_free/"><strong>Checkout the code »</strong></a>
     <br />
@@ -99,12 +99,10 @@ Contributions are what make the open source community such an amazing place to b
 5. Open a Pull Request
 
 
-
 <!-- LICENSE -->
 ## License
 
 Distributed under the GPL-3.0 License. See `LICENSE` for more information.
-
 
 
 <!-- CONTACT -->
@@ -115,10 +113,10 @@ Jonathan Lemanski - lemanskij@mymacewan.ca
 Project Link: [https://github.com/jlemanski1/chat_free/](https://github.com/jlemanski1/chat_free/)
 
 
-
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
-* [Vincent Le Moign](https://iconscout.com/contributors/vincent-le-moign) for the logo
+* [Vincent Le Moign](https://iconscout.com/contributors/vincent-le-moign) for the Logo
+* [Jemis Mali](https://iconscout.com/contributors/jemismali) for the Icon
 * [Flutter Docs](https://flutter.dev/docs) for help with all things Flutter
 
 
@@ -127,13 +125,5 @@ Project Link: [https://github.com/jlemanski1/chat_free/](https://github.com/jlem
 [license-url]: https://github.com/jlemanski1/chat_free/blob/master/LICENSE
 [issues-shield]: https://img.shields.io/github/issues/jlemanski1/chat_free
 [issues-url]: https://github.com/jlemanski1/chat_free/issues
-
 [cSize-shield]: https://img.shields.io/github/languages/code-size/jlemanski1/chat_free
 [cSize-url]: https://github.com/jlemanski1/chat_free
-
-
-
-
-
-
-

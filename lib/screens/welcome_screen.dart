@@ -69,7 +69,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> with SingleTickerProvider
                   style: kTitleTextStyle,
                 ),
                 RotateAnimatedTextKit(
-                  text: ['Free', 'Easy', 'Whenever', 'Always'],
+                  text: ['Free', 'Easy', 'Whenever', 'Always', 'Securely'],
                   textStyle: kTitleTextStyle.copyWith(
                     color: Colors.black,
                   ),
