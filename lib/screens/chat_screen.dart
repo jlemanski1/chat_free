@@ -56,7 +56,7 @@ class _ChatScreenState extends State<ChatScreen> {
             },
           ),
         ],
-        title: Text('Chat Free'),
+        title: Text('ChatFree'),
         backgroundColor: Colors.lightBlueAccent,
       ),
       body: SafeArea(

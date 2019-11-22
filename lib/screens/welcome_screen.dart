@@ -60,7 +60,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> with SingleTickerProvider
                     tag: 'logo',
                     child: Container(
                       height: 60.0,
-                      child: Image.asset('images/placeholder_logo.png'),
+                      child: Image.asset('images/logo.png'),
                     ),
                   ),
                 ),
