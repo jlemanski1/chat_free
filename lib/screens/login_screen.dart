@@ -31,6 +31,8 @@ class _LoginScreenState extends State<LoginScreen> {
               height: 48.0,
             ),
             TextField(
+              keyboardType: TextInputType.emailAddress,
+              textAlign: TextAlign.center,
               onChanged: (value) {
                 // TODO: do something with user input
               },
@@ -40,6 +42,16 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
             SizedBox(
               height: 24.0,
+            ),
+            TextField(
+              textAlign: TextAlign.center,
+              obscureText: true,
+              onChanged: (value) {
+                // TODO: do something with user input
+              },
+              decoration: kTextFieldDecoration.copyWith(
+                hintText: 'Enter your password',
+              )
             ),
             RoundedButton(
               title: 'Log In',
