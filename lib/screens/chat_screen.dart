@@ -23,6 +23,7 @@ class _ChatScreenState extends State<ChatScreen> {
     getCurrentUser();
   }
 
+
   void getCurrentUser() async {
     try {
       final user = await _auth.currentUser();
@@ -35,6 +36,17 @@ class _ChatScreenState extends State<ChatScreen> {
       print(e);
     }
   }
+
+
+  // Listen to cloud FireStore messages collection & retrieve on change
+  void messageStream() async {
+    await for(var snapshot in _fireStore.collection('messages').snapshots()) {
+      for (var msg in snapshot.documents) {
+        print(msg.data);
+      }
+    }
+  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -58,6 +70,33 @@ class _ChatScreenState extends State<ChatScreen> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
+            StreamBuilder<QuerySnapshot>(
+              stream: _fireStore.collection('messages').snapshots(),
+              builder: (context, snapshot) {
+                if (!snapshot.hasData) {
+                  return Center(
+                    child: CircularProgressIndicator(
+                      backgroundColor: Colors.lightBlueAccent,
+                    ),
+                  );
+                }
+
+                // StreamBuilder has data from Cloud FireStore
+                final msgs = snapshot.data.documents;
+
+                List<Text> msgWidgets = [];
+                for (var msg in msgs) {
+                  final msgText = msg.data['text'];
+                  final msgSender = msg.data['sender'];
+
+                  final msgWidget = Text('$msgText from $msgSender');
+                  msgWidgets.add(msgWidget);
+                }
+                return Column(
+                  children: msgWidgets,
+                );
+              },
+            ),
             Container(
               decoration: kMessageContainerDecoration,
               child: Row(
