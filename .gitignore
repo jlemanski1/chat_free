@@ -9,6 +9,10 @@
 .history
 .svn/
 
+# Firebase Keys
+**/android/app/google-services.json
+
+
 # IntelliJ related
 *.iml
 *.ipr
