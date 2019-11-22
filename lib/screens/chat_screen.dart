@@ -62,6 +62,7 @@ class _ChatScreenState extends State<ChatScreen> {
                 children: <Widget>[
                   Expanded(
                     child: TextField(
+                      decoration: kMessageTextFieldDecoration,
                       onChanged: (value) {
                         // TODO: Do something with user input
                       },
