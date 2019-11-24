@@ -85,6 +85,7 @@ flutter install
 ## Roadmap
 
 See the [open issues](https://github.com/jlemanski1/chat_free/issues) for a list of proposed features (and known issues).
+Better yet, stay in the loop on the [project board](https://github.com/jlemanski1/chat_free/projects/1).
 
 <!-- CONTRIBUTING -->
 ## Contributing
