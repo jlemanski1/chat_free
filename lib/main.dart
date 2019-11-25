@@ -13,7 +13,7 @@ class ChatFree extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      initialRoute: WelcomeScreen.id,
+      initialRoute: ConvoScreen.id, // TODO: Change back to WelcomeScreen
       routes: {
         WelcomeScreen.id: (context) => WelcomeScreen(),
         LoginScreen.id: (context) => LoginScreen(),
