@@ -91,6 +91,7 @@ class _ConvoScreenState extends State<ConvoScreen> {
                     onPressed: () {
                       msgTextController.clear();
                       _fireStore.collection('groups').add({
+                        // TODO: Create new group in firestore database
                         
                       });
                     },

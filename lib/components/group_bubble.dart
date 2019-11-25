@@ -16,16 +16,17 @@ class GroupBubble extends StatelessWidget {
           Text(
             name,
             style: TextStyle(
-              fontSize: 12.0,
+              fontSize: 24.0,
+              fontWeight: FontWeight.bold,
               color: Colors.black87,
             ),
           ),
           Material(
             elevation: 5.0,
             borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(30.0),
-              bottomLeft: Radius.circular(30.0),
-              bottomRight: Radius.circular(30.0),
+                topRight: Radius.circular(30.0),
+                bottomLeft: Radius.circular(30.0),
+                bottomRight: Radius.circular(30.0),
             ),
             color: Colors.lightBlueAccent,
               child: Padding(
