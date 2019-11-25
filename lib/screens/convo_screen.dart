@@ -1,3 +1,4 @@
+import 'package:chat_free/components/group_stream.dart';
 import 'package:chat_free/constants.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -64,6 +65,10 @@ class _ConvoScreenState extends State<ConvoScreen> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
+            GroupStream(
+              snapshots: _fireStore.collection('groups').orderBy('timestamp', descending: true).snapshots(),
+              loggedInUser: loggedInUser,
+            ),
             Container(
               decoration: kMessageContainerDecoration,
               child: Row(
@@ -74,7 +79,7 @@ class _ConvoScreenState extends State<ConvoScreen> {
                       controller: msgTextController,
                       decoration: InputDecoration(
                         contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
-                        hintText: 'Start a conversation!',
+                        hintText: 'Start a group, add some friends!',
                         border: InputBorder.none,
                       ),
                       onChanged: (value) {
@@ -85,7 +90,9 @@ class _ConvoScreenState extends State<ConvoScreen> {
                   FlatButton(
                     onPressed: () {
                       msgTextController.clear();
-                      
+                      _fireStore.collection('groups').add({
+                        
+                      });
                     },
                     child: Text(
                       'Add',
