@@ -1,5 +1,5 @@
 import 'package:chat_free/constants.dart';
-import 'package:chat_free/screens/chat_screen.dart';
+import 'package:chat_free/screens/convo_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:chat_free/components/rounded_button.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -82,7 +82,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                       password: password,
                     );
                     if (newUser != null) {
-                      Navigator.pushNamed(context, ChatScreen.id);
+                      Navigator.pushNamed(context, ConvoScreen.id);
                     }
                     setState(() {
                       showSpinner = false;

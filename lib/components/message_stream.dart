@@ -15,6 +15,7 @@ class MessageStream extends StatelessWidget {
     return StreamBuilder<QuerySnapshot>(
       stream: snapshots,
       builder: (context, snapshot) {
+        // Loading Spinnger if snapshot has no data
         if (!snapshot.hasData) {
           return Center(
             child: CircularProgressIndicator(
